@@ -19,7 +19,7 @@ def socket_service():
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         # 防止socket server重启后端口被占用（socket.error: [Errno 98] Address already in use）
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        s.bind(('211.69.198.169', 6666))
+        s.bind(('***** ip of server*****', 6666))
         s.listen(10)
     except socket.error as msg:
         #print msg
