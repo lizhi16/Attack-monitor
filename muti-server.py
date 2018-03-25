@@ -33,7 +33,7 @@ class Handler(BaseRequestHandler):
                 break
 
 if __name__ == '__main__':
-    HOST = '202.114.6.253'
+    HOST = sys.argv[1]
     PORT = 8998
     ADDR = (HOST,PORT)
     server = ThreadingTCPServer(ADDR,Handler)  #参数为监听地址和已建立连接的处理类
