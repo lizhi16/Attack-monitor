@@ -8,7 +8,7 @@ email:lockey@123.com
 desc:socket编程客户端，python3.6.2
 '''
 import socket,sys
-HOST = '202.114.6.253'
+HOST = sys.argv[1]
 PORT = 8998
 ADDR =(HOST,PORT)
 #BUFSIZE = 102400
@@ -16,7 +16,7 @@ ADDR =(HOST,PORT)
 sock = socket.socket()
 try:
     sock.connect(ADDR)
-    data = sys.argv[1]
+    data = sys.argv[2]
     sock.sendall(data.encode('utf-8')) #不要用send()
     #recv_data = sock.recv(BUFSIZE)
     sock.close()
